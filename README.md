@@ -2,36 +2,36 @@
 Curso da linguagem Elixir da FreeCodeCamp (https://www.youtube.com/watch?v=IiIgm_yaoOA)
 
 
-Instalar no ubuntu:
-1) Instale o gerenciador asdf
+Instalar:
+sudo add-apt-repository ppa:rabbitmq/rabbitmq-erlang
+sudo apt update
+sudo apt install elixir erlang-dev erlang-xmerl
 
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-
-. $HOME/.asdf/asdf.sh
-
-2) Instale os plugins do erlang e elixir: 
-asdf plugin add erlang
-
-asdf plugin add elixir
-
-3) Listar versões erlang:
-asdf list-all erlang
-
-4) Instalar erlang:
-asdf install erlang xx.x.x
-
-5) Listar versões elixir:
-asdf list-all elixir
-
-6) Instalar elixir:
-asdf install elixir xx.x.x
-
-7) setar versão global:
-asdf global erlang xx.x.x
-asdf global elixir x.x.x-otp-xx
-
-8) conferir:
+Verificar:
 elixir -v
 
+Executar terminal interativo:
+iex
 
 
+Arquivos com a extnsão .exs são scripts elixir.
+Usado para testar alguma lógica ou serem executados diretamente.
+
+Exemplo:
+Crie arquivo com nome hello.exs
+
+e cole:
+defmodule Hello do
+  def world do
+    IO.puts("Hello Elixir!")
+  end
+end
+
+Hello.world()
+
+Para executar:
+elixir hello.exs
+
+
+
+Dá para compilá-lo, irá gerar um arquivo com a extensão .beam
