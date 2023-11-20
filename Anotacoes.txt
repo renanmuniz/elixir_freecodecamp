@@ -1,0 +1,90 @@
+Anotacoes 
+
+Instalar:
+sudo add-apt-repository ppa:rabbitmq/rabbitmq-erlang
+sudo apt update
+sudo apt install elixir erlang-dev erlang-xmerl
+
+Verificar:
+elixir -v
+
+Executar terminal interativo:
+iex
+
+
+Arquivos com a extnsão .exs são scripts elixir.
+Usado para testar alguma lógica ou serem executados diretamente.
+
+Exemplo:
+Crie arquivo com nome hello.exs
+
+e cole:
+defmodule Hello do
+  def world do
+    IO.puts("Hello Elixir!")
+  end
+end
+
+Hello.world()
+
+Para executar:
+elixir hello.exs
+
+
+Dá para compilá-lo, irá gerar um arquivo com a extensão .beam
+elixirc hello.exs
+
+executar uma funcao desse script que foi compilado via terminal interativo:
+1) iex
+2) 
+iex(6)> Hello.world("teste")
+Hello teste!
+:ok
+
+
+Data types:
+
+ATOM
+
+tuplas:
+iex(1)> {:error, reason} = {:error, "File not found"}
+{:error, "File not found"}
+iex(2)> reason
+"File not found"
+
+
+Strings
+iex(5)> "Renan"
+"Renan"
+iex(6)> i("Renan")
+Term
+  "Renan"
+Data type
+  BitString
+Byte size
+  5
+Description
+  This is a string: a UTF-8 encoded binary. It's printed surrounded by
+  "double quotes" because all UTF-8 encoded code points in it are printable.
+Raw representation
+  <<82, 101, 110, 97, 110>>
+Reference modules
+  String, :binary
+Implemented protocols
+  Collectable, IEx.Info, Inspect, List.Chars, String.Chars
+
+
+iex(10)> name = "Joao"
+"Joao"
+iex(11)> name
+"Joao"
+
+
+Concatenar strings:
+iex(12)> saudacao = "Olá " <> name
+"Olá Joao"
+iex(13)> saudacao
+"Olá Joao"
+
+
+
